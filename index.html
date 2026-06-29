@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>private.coder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div id="login-screen" class="screen">
+    <div class="login-card">
+      <div class="brand"><span class="cursor">▍</span>private.coder</div>
+      <p class="prompt-label">$ enter access key:</p>
+      <form id="login-form">
+        <input type="password" id="password-input" placeholder="••••••••" autocomplete="current-password" autofocus />
+        <button type="submit" id="login-btn">Unlock</button>
+      </form>
+      <p id="login-error" class="error-text"></p>
+    </div>
+  </div>
+
+  <!-- ===== APP SCREEN ===== -->
+  <div id="app-screen" class="screen hidden">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand small"><span class="cursor">▍</span>private.coder</div>
+        <button id="new-chat-btn" title="New conversation">+ new</button>
+      </div>
+      <div id="conversation-list" class="conversation-list"></div>
+      <button id="logout-btn" class="logout-btn">$ logout</button>
+    </aside>
+
+    <main class="chat-main">
+      <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+      <div id="messages" class="messages"></div>
+      <form id="chat-form" class="chat-input-row">
+        <textarea id="chat-input" placeholder="Ask a coding question..." rows="1"></textarea>
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
